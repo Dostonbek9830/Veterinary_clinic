@@ -1,0 +1,74 @@
+:root {
+    -main--title-color: #333333;
+    -main--text-color: #949494;
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/FuturaPT-Light.woff") format("woff"); 
+    src: url("/fonts/FuturaPT-Light.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FuturaPT-Book.woff") format("woff"); 
+    src: url("/fonts/FuturaPT-Book.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/FuturaPT-Medium.woff") format("woff"); 
+    src: url("/fonts/FuturaPT-Medium.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/FuturaPT-Bold.woff") format("woff"); 
+    src: url("/fonts/FuturaPT-Bold.woff2") format("woff2"); 
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "FuturaPT" , "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url(/images/img/body_bg.png), #F9F9F9;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
