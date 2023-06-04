@@ -60,10 +60,6 @@ main {
     flex-grow: 1;
 }
 
-img {
-    
-    height: auto;
-}
 
 .container {
     max-width: 1350px;
@@ -451,8 +447,15 @@ blockquote::after {
     text-align: center;
 }
 
+.services__inner {
+    position: relative;
+}
+
 
 .services__left-arrow {
+    position: absolute;
+    top: 40%;
+    left: calc(-5% - 20px);
     padding: 0;
     border: none;
     width: 50px;
@@ -462,6 +465,7 @@ blockquote::after {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
+    display: block;
 }
 
 .services__left-arrow:hover {
@@ -473,6 +477,9 @@ blockquote::after {
 }
 
 .services__right-arrow {
+    position: absolute;
+    top: 40%;
+    right: calc(-5% - 20px);
     padding: 0;
     border: none;
     width: 50px;
@@ -497,23 +504,35 @@ blockquote::after {
     display: flex;
     padding: 0;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 13px;
 }
 
 .services__item {
+    position: relative;
     width: 193px;
-    height: 201px;
-    padding: 129px 32px 42px 35px;
     background: #FFFFFF;
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid red;
+    border: 1px solid #fff;
+}
+
+.services__item:nth-child(1) {
+    margin-top: 13px;
+    height: 215px;
+}
+
+.services__item:hover{
+    opacity: 0.8;
+}
+
+.services__item:active {
+    opacity: 0.6;
 }
 
 .services__title {
     margin: 0;
-    padding: 0;
+    padding: 129px 35px 28px;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -522,13 +541,390 @@ blockquote::after {
 }
 
 .services__link {
-    margin: 0;
-    padding: 0;
     text-decoration: none;
 }
 
+.services__link--maleicon::before {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    content: "";
+    width: 55px;
+    height: 79px;
+    background: url(/images/icons/male_doctor.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.services__link--womanicon::before {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    content: "";
+    width: 58px;
+    height: 77px;
+    background: url(/images/icons/woman_doctor.svg);
+    background-size: cover;
+    background-size: 58px 76px;
+    background-repeat: no-repeat;
+    display: block;
+    
+}
+
+.services__link--injection::before {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    content: "";
+    width: 72px;
+    height: 77px;
+    background: url(/images/icons/surgical_intervention.svg);
+    background-size: cover;
+    background-size: 72px 77px;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.services__link--dermatology::before {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    content: "";
+    width: 75px;
+    height: 75px;
+    background: url(/images/icons/dermatology.svg);
+    background-size: cover;
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.services__title--padding {
+    padding-top: 138px;
+    padding-bottom: 39px;
+}
+
+.services__link--diagnosis::before {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    content: "";
+    width: 78px;
+    height: 78px;
+    background: url(/images/icons/microscope.svg);
+    background-size: cover;
+    background-size: 78px 78px;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.services__link--ophthalmology::before {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    content: "";
+    width: 78px;
+    height: 78px;
+    background: url(/images/icons/ophthalmology.svg);
+    background-size: cover;
+    background-size: 78px 78px;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.services-blog {
+    padding-bottom: 127px;
+}
 
 
+.services-blog__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 42px 105px 43px 27px;
+    background: #FFFFFF;
+    border-radius: 0px 5px 5px 5px;
+    
+}
+
+.services-blog__text {
+    width: 492px;
+    
+}
+
+
+.services-blog__title {
+    padding-bottom: 18px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 20px;
+    color: var(--main-title-color);
+}
+
+.services-blog__desc, .services-blog__desc-extra  {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    
+}
+
+.services-blog__desc-extra {
+    padding-top: 9px;
+    padding-bottom: 49px;
+}
+
+.services-blog__link-price {
+    position: relative;
+    margin-right: 21px;
+    padding: 15px 36px 16px 63px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #FFBD54;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.services-blog__link-price::before {
+    content: " ";
+    width: 21px;
+    height: 21px;
+    background: url(/images/icons/money.svg);
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    
+}
+
+.services-blog__link-price:hover {
+    background: #333333;
+    border-radius: 3px;
+    color: #FFBD54;
+}
+
+.services-blog__link-price:active {
+    opacity: 0.6;
+}
+
+.services-blog__link-appoinment {
+    position: relative;
+    padding: 15px 37px 16px 64px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #333333;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.services-blog__link-appoinment::before {
+    content: " ";
+    width: 21px;
+    height: 21px;
+    background: url(/images/icons/draft.svg);
+    background-size: 21px 21px;
+    background-position: ;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+
+/* Subscription section start */
+
+.subscription {
+    width: 100%;
+    height: 308px;
+    background-image: url(/images/img/subcribe_bgg.png);
+    background-size: cover;
+    
+}
+
+.subscription__wrapper {
+    padding-top: 100px;
+    padding-left: 150px;
+}
+
+.subscription__hero {
+    padding-bottom: 32px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px;
+    color: #fff;
+}
+
+input::placeholder {
+    font-family: "FuturaPT";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    
+}
+
+.subscription__email {
+    padding-left: 22px;
+    width: 355px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.subscription__email:focus {
+    border: 2px solid #FFBD54;
+    border-radius: 5px;
+    outline: none;
+} 
+
+
+.subscription__btn {
+    margin-left: 21px;
+    padding: 13px 53px 14px 53px;
+    font-family: "FuturaPT";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: none;
+    background: #333333;
+    border-radius: 3px;
+}
+
+/* Blog section starts */
+
+.blog-section__hero {
+    padding-top: 151px;
+    padding-bottom: 80px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px;
+    color: var(--main-title-color);
+    text-align: center;
+}
+
+.blog-section__list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.blog-section__item {
+    width: 305px;
+    border: 1px solid #E4E4E2;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.blog-section__item:hover {
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.blog-section__time {
+    display: block;
+    padding-top: 21px;
+    padding-right:22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--main-text-color);
+    text-align: end;
+}
+
+.blog-section__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    color: #000000;
+    
+}
+
+.blog-section__desc {
+    padding-top: 10px;
+    padding-bottom: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--main-text-color);
+}
+
+
+.blog-section__link {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--main-title-color);
+    text-decoration: none;
+}
+
+.blog-section__link::before {
+    content: " ";
+    width: 23px;
+    height: 20px;
+    background-image: url(/images/icons/footprint.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -2px;
+}
+
+.blog-section__text-wrapper {
+    width: 100%;
+    padding: 2px 31px 36px 30px;
+}
+
+.blog-section__center-item {
+    display: flex;
+    gap: 31px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 5px;
+}
+
+.blog-section__center-text {
+    padding: 41px 34px 37px 0px;
+}
+
+.center--time {
+    display: inline-block;
+}
+
+.blog-section__hashtags {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #3D9CEA;
+    text-decoration: none;
+}
+
+.center--time {
+    padding: 0px 0px 0px 67px;
+}
+
+.title--padding {
+    padding-top: 31px;
+}
+
+.blog-section__center-wrapper {
+    width: 270px;
+}
+
+.blog-section__end-item {
+    width: 305px;
+    border: 1px solid #E4E4E2;
+    border-radius: 5px;
+    background-color: #fff;
+}
 
 
 
