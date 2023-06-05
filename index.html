@@ -13,7 +13,7 @@
         <div class="container">
             <div class="site-header__start">
                 <address class="site-header__address">
-                    <a class="site-header__google" href="https://goo.gl/maps/ZChqNaZB7JyB4iGd9" target="_blank">г. Мариуполь, проспект Победы, 48а</a>
+                    <a class="site-header__map" href="https://goo.gl/maps/ZChqNaZB7JyB4iGd9" target="_blank">г. Мариуполь, проспект Победы, 48а</a>
                     <ul class="site-header__phonelist">
                         <li class="site-header__phoneitem"><a href="tel:0676347574" class="site-header__phonelink">(067) 634 -75 - 74</a></li>
                         <li class="site-header__phoneitem"><a href="tel:0637570131" class="site-header__phonelink site-header--round">(0637) 57 - 01 - 31</a></li>
@@ -143,12 +143,14 @@
                 <div class="subscription__wrapper">
                     <h2 class="subscription__hero">Будь в курсе событий</h2>
                     <form action="https://echo.htmlacademy.ru/courses" method="POST">
-                        <input class="subscription__email" type="email" placeholder="Укажите Ваш email адрес" autocomplete="off" required>
+                        <label for="user_email"></label>
+                        <input class="subscription__email" name="user_email" id="user_email" type="email" placeholder="Укажите Ваш email адрес" autocomplete="off" required>
                         <button class="subscription__btn" type="submit">Подписаться</button>
                     </form>
                 </div>
             </div>
         </section>
+        <!-- Blog section starts -->
         <section class="blog-section">
             <h2 class="blog-section__hero">Полезные статьи</h2>
             <ul class="blog-section__list">
@@ -177,16 +179,72 @@
                 </li>
                 <li class="blog-section__end-item">
                     <img src="./images/img/dog_injection.png" alt="a cat is looking at " width="305" height="180" class="blog-section__end-img">
-                    <time class="blog-section__time" datetime="2020-08-28 11:00">28.08.2020</time>
+                    <time class="blog-section__time" datetime="2020-07-21 01:25">21.07.2020</time>
                     <div class="blog-section__text-wrapper">
-                        <h3 class="blog-section__title">Ультразвуковая чистка зубов</h3>
+                        <h3 class="blog-section__title">Когда привавать питомца?</h3>
                         <p class="blog-section__desc">Появление в доме котенка приятное и радосное событие. Но не всегда этот пушистый зверек берется от ...</p>
                         <a href="#" class="blog-section__link">Читать больше</a>
                     </div>
                 </li>
             </ul>
-
-    </section>
-</main>
+        </section>
+        <!-- Feedback section -->
+        <section class="feedback">
+            <div class="feedback__wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.565682645302!2d37.642411599999996!3d47.1075844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e6701cd9c691%3A0xe9b99fd0268f089c!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNGLLCA0ONCwLCDQnNCw0YDQuNGD0L_QvtC70YwsINCU0L7QvdC10YbQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCA4NzUwMA!5e0!3m2!1sru!2s!4v1685910643242!5m2!1sru!2s" width="462" height="652" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="feedback__flex-bg">
+                    <div class="feedback__text-inner">
+                        <h2 class="feedback__title">Обратная связь</h2>
+                        <p class="feedback__desc">При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
+                        <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="POST" autocomplete="off">
+                            <label for="user_name" aria-label="Ваше имя"></label>
+                            <input class="feedback__user-name" type="text" name="user_name" id="user_name" placeholder="Ваше имя" required>
+                            <label for="user_email" aria-label="Email для обратной связи"></label>
+                            <input class="feedback__user-email" type="email" name="user_email" placeholder="Email для обратной связи" required>
+                            <label for="feedback__message" aria-label="Опишите Ваш вопрос"></label>
+                            <textarea name="feedback__message" id="feedback__message" placeholder="Опишите Ваш вопрос."></textarea>
+                            
+                        </form>
+                        <button class="blog-section__btn" type="submit">Задать нам вопрос</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer starts -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__inner">
+                    <div class="site-footer__wrapper-start">
+                        <a href="index.html" class="site-footer__logo-link"><img class="site-footer__logo" src="/images/icons/logo.svg" alt="Site logo" width="158" height="77"></a>
+                        <ol class="site-footer__list">
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">Главная</a></li>
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">О Клинике</a></li>
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">Наши Услуги</a></li>
+                        </ol>
+                        <ol class="site-footer__list">
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">Полезные Статьи</a></li>
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">FAQ</a></li>
+                            <li class="site-footer__item"><a href="#" class="site-footer__link">Контакты</a></li>
+                        </ol>
+                    </div>
+                    <div class="site-footer__wrapper-address">
+                        <ol class="site-footer__list-time">
+                            <li class="site-footer__item-time"><time datetime="2023-06-05 08:00" class="site-footer__time"><strong>Пн - Пт</strong> 8:00 - 18:00</time></li>
+                            <li class="site-footer__item-time"> <time class="site-footer__time" datetime="2023-06-05 14:00"><strong>Сб - Вс</strong> 8:00 - 14:00</time></li>
+                        </ol>
+                        <address class="site-footer__address">
+                            <a class="site-footer__map" href="https://goo.gl/maps/ZChqNaZB7JyB4iGd9" target="_blank">г. Мариуполь, проспект Победы, 48а</a>
+                        </address>
+                        <ol class="site-footer__phonelist">
+                            <li class="site-footer__phoneitem"><a href="tel:0676347574" class="site-footer__phonelink">(067) 634 - 75 - 74</a></li>
+                            <li class="site-footer__phoneitem"><a href="tel:0637570131" class="site-footer__phonelink">(0637) 57 - 01 - 31</a></li>
+                            <li class="site-footer__phoneitem"><a href="tel:0982664389" class="site-footer__phonelink">(098) 266 - 43 - 89</a></li>
+                        </ol>
+                    </div>
+                </div> 
+                <span class="site-footer__copyright">© 2020 example. All Rights Reserved.</span>
+            </div>
+        </footer>
+    </main>
 </body>
 </html>
