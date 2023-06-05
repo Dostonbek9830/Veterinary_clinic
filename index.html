@@ -143,7 +143,7 @@
                 <div class="subscription__wrapper">
                     <h2 class="subscription__hero">Будь в курсе событий</h2>
                     <form action="https://echo.htmlacademy.ru/courses" method="POST">
-                        <label for="user_email"></label>
+                        <label for="user_email" aria-label="Enter your name"></label>
                         <input class="subscription__email" name="user_email" id="user_email" type="email" placeholder="Укажите Ваш email адрес" autocomplete="off" required>
                         <button class="subscription__btn" type="submit">Подписаться</button>
                     </form>
@@ -200,10 +200,10 @@
                             <p class="feedback__desc">При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
                             <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="POST" autocomplete="off">
                                 <label for="user_name" aria-label="Ваше имя"></label>
-                                <input class="feedback__user-name" type="text" name="user_name" id="user_name" placeholder="Ваше имя" required>
-                                <label for="user_email" aria-label="Email для обратной связи"></label>
+                                <input class="feedback__user-name" type="text" name="user_name" id="user_name" placeholder="Enter your name" required>
+                                <label for="user_email" aria-label="Enter your email"></label>
                                 <input class="feedback__user-email" type="email" name="user_email" placeholder="Email для обратной связи" required>
-                                <label for="feedback__message" aria-label="Опишите Ваш вопрос"></label>
+                                <label for="feedback__message" aria-label="Write your message"></label>
                                 <textarea name="feedback__message" id="feedback__message" placeholder="Опишите Ваш вопрос."></textarea>
                             </form>
                             <button class="feedback__section-btn" type="submit">Задать нам вопрос</button>
